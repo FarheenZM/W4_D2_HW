@@ -1,0 +1,6 @@
+
+<% for order in @orders %> <!-- dont render to page bcoz no =, whereas = says render to page i.e display o/p on page-->
+  <p>Name: <%= order.pretty_name() %> </p>
+  <p>Order: <%= order.quantity %> x <%= order.topping %> </p>
+  <p><a href="/pizza-orders/<%= order.id %>">Show Order</a></p>
+<% end %>
